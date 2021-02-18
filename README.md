@@ -25,7 +25,9 @@ To use the updated .bat file:
 2. Update the path in the first line with the path of your backup script
 3. If you want to change the script arguments, append them to the first line
 	- ex. change ```start "" C:\Users\<username>\AppData\LocalLow\IronGate\Valheim\worlds\backup.py``` to ```start "" C:\Users\<username>\AppData\LocalLow\IronGate\Valheim\worlds\backup.py -t 600```
-4. Ensure your server isn't currently running, then run your updated start_headless_server.bat
-5. You should see the standard server terminal open as well as the python terminal open for backup.py
+4. Move your new start_headless_server.bat file to the server.exe folder (defaults to C:\Program Files (x86)\Steam\steamapps\common\Valheim dedicated server)
+5. Create a copy of start_headless_server.bat - when steam updates the server the original file will be overwritten and you will need to replace it with your copy.
+6. Ensure your server isn't currently running, then run your updated start_headless_server.bat
+7. You should see the standard server terminal open as well as the python terminal open for backup.py
 
 
