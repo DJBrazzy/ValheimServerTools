@@ -3,6 +3,7 @@ import getopt
 import shutil
 import os
 import time
+from datetime import datetime
 
 def main(argv):
     pathname = os.path.dirname(sys.argv[0])
@@ -47,12 +48,13 @@ def main(argv):
         elif opt in ("-n", "--numbackups"):
             numBackups = int(arg)
     print('Duplicating ' + folderPath + ' contents to ' + backupPath)
-    print('Running backup every ' + str(timer) + 'seconds. Maintaining ' + str(numBackups)+' backups')
+    print('Running backup every ' + str(timer) + ' seconds. Maintaining ' + str(numBackups)+' backups')
 
     ## Start backup cycle
     while True:
+        now = datetime.now()
         backupCount += 1
-        print('Running backup ' + str(backupCount) +'...')
+        print(now.strftime("%H:%M:%S") + 'Running backup ' + str(backupCount) +'...')
         currentBackupPath = backupPath
 
         if numBackups > 1:
