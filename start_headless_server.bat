@@ -1,4 +1,4 @@
-start "" C:\Users\david\AppData\LocalLow\IronGate\Valheim\worlds\backup.py
+start "" C:\Users\<username>\AppData\LocalLow\IronGate\Valheim\worlds\backup.py
 
 @echo off
 set SteamAppId=892970
